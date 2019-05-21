@@ -29,10 +29,6 @@ class Song
   end
 
   def find_by_name(song_name)
-    if self.all.include?(song_name)
-      return song_name
-    else
-      false
-    end
+    self.all.detect{|s| s.name == song_name}
   end
 end
