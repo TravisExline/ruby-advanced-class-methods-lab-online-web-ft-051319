@@ -28,6 +28,7 @@ class Song
     song
   end
 
-  def find_by_name
+  def find_by_name(song_name)
+    @@all.each { |song_title| if song_title == song_name}
   end
 end
