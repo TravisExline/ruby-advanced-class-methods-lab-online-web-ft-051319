@@ -33,12 +33,6 @@ class Song
   end
 
   def self.find_or_create_by_name(new_song)
-    self.all.each do |song_name|
-      if self.find_by_name(song_name) == new_song
-        song.delete
-      else
-        self.create_by_name(song_name)
-      end
-    end
+    self.find_by_name(new_song) || self.create_by_name(song_name)
   end
 end
